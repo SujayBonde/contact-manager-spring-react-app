@@ -3,6 +3,8 @@
 A full-stack **Contact Manager** web application built with **Spring Boot (Backend)** and **React (Frontend)**.
 It supports **CRUD operations** (Create, Read, Update, Delete) with authentication and a modern UI.
 
+<img width="1917" height="1072" alt="contact manager" src="https://github.com/user-attachments/assets/77b30906-ec1a-4a82-9369-b58113e72070" />
+
 ---
 
 ## 🚀 Features
