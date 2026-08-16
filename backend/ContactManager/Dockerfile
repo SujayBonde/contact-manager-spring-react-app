@@ -1,14 +1,12 @@
-# Use an official JDK 21 runtime image
-FROM eclipse-temurin:21-jdk
-
-# Set working directory inside container
+# Stage 1: Build JAR
+FROM eclipse-temurin:21-jdk AS build
 WORKDIR /app
+COPY . .
+RUN ./mvnw clean package -DskipTests
 
-# Copy the JAR file built by Maven into the container
-COPY target/ContactManager-0.0.1-SNAPSHOT.jar app.jar
-
-# Expose the port your Spring Boot app runs on
+# Stage 2: Run JAR
+FROM eclipse-temurin:21-jdk
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
-
-# Run the JAR
 ENTRYPOINT ["java", "-jar", "app.jar"]
