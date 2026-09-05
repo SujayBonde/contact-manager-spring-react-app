@@ -2,7 +2,8 @@ import axios from "axios";
 
 // Create Axios instance
 const API = axios.create({
-  baseURL: "http://localhost:8080",
+  // baseURL: "http://localhost:8080",
+  baseURL: "https://e-commerce-react-spring-boot.onrender.com",
 });
 
 // Attach JWT token to every request
