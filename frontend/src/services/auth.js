@@ -1,4 +1,5 @@
-const API_BASE = "http://localhost:8080/api";
+// const API_BASE = "http://localhost:8080/api";
+const API_BASE = "https://e-commerce-react-spring-boot.onrender.com/api";
 
 export const authService = {
   login: async (username, password) => {
